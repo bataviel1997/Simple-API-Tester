@@ -1,0 +1,46 @@
+### read notes
+GET http://localhost:3000/notes
+Content-Type: application/json
+
+### read single note
+GET http://localhost:3000/notes/2
+Content-Type: application/json
+
+### read + sort and order
+GET http://localhost:3000/notes?_sort=id&_order=desc
+Content-Type: application/json
+
+### read +pagination
+GET  http://localhost:3000/notes?_page=1&_limit=3&_sort=id&_order=desc
+Content-Type: application/json
+
+### create note
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "catatan": "ini adalah hasil POST3",
+    "status": false
+}
+
+### detele note
+DELETE  http://localhost:3000/notes/1
+Content-Type: application/json
+
+### update
+PUT http://localhost:3000/notes/3
+Content-Type: application/json
+
+{
+    "catatan": "ini adalah hasil PUT",
+    "status": true
+}
+
+### udpate single data note
+PATCH http://localhost:3000/notes/3
+Content-Type: application/json
+
+{
+    "status": false
+}
+
